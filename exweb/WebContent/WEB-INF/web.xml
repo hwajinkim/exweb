@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>exweb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!--com.exam.ByeServlet 서블릿 객체를 Bye 라는 이름으로 서버 (톰캣)에 등록   -->
+  <servlet>
+      <servlet-name>Bye</servlet-name>
+      <servlet-class> com.exam.ByeServlet</servlet-class>
+  </servlet>
+  
+    <!--/bye.do로 요청이 오면, Bye 라는 이름으로 등록되어 있는 서블릿을 실행    -->
+  <servlet-mapping>
+      <servlet-name>Bye</servlet-name>
+      <url-pattern>/bye.do</url-pattern>
+  </servlet-mapping>
+</web-app>
